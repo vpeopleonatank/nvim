@@ -5,6 +5,7 @@ local dein = require 'dein'
 local map = require 'mapping'
 local theme = require 'theme'
 local vim,api = vim,vim.api
+local pack = require('loadpack')
 local M = {}
 
 function M.createdir()
@@ -60,8 +61,10 @@ function M.load_core()
   local ops = options:new()
   ops:load_options()
 
-  local d = dein:new()
-  d:load_repos()
+  pack.load_repos()
+
+  -- local d = dein:new()
+  -- d:load_repos()
 
   map.load_mapping()
   autocmd.load_autocmds()
