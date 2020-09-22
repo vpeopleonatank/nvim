@@ -9,8 +9,8 @@ function M.load_repos()
     if not global.isdir(packer_dir) then
       os.execute(cmd)
     end
-    vim.o.runtimepath = vim.o.runtimepath .. ','..packer_dir
-    vim.o.packpath = vim.o.packpath .. ','..plugin_dir..'packer'
+    -- vim.o.runtimepath = vim.o.runtimepath .. ','..packer_dir
+    vim.o.packpath = vim.o.packpath .. ','..plugin_dir
   end
   local packer = require('packer')
   local use = packer.use
