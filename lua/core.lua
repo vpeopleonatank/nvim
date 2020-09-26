@@ -61,7 +61,8 @@ function M.load_core()
   local ops = options:new()
   ops:load_options()
 
-  pack.load_repos()
+  p = pack:new()
+  p:load_repos()
 
   -- local d = dein:new()
   -- d:load_repos()
