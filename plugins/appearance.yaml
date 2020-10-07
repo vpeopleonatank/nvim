@@ -1,6 +1,3 @@
-- repo: wbthomason/packer.nvim
-  opt: 0
-
 - repo: ryanoasis/vim-devicons
 
 - repo: glepnir/spaceline.vim
