@@ -3,7 +3,7 @@ local global = require('global')
 local enhance = {
   {'kristijanhusak/vim-dadbod-ui',
    cmd = {'DBUIToggle','DBUIAddConnection','DBUI','DBUIFindBuffer','DBUIRenameBuffer'},
-   requires = 'tpope/vim-dadbod',
+   requires = {'tpope/vim-dadbod',opt = true},
    config = function()
        vim.g.db_ui_show_help = 0
        vim.g.db_ui_win_position = 'left'
@@ -13,7 +13,7 @@ local enhance = {
        vim.g.dbs = vim.fn['initself#load_db_from_env']()
    end
    };
-   {'rhysd/accelerated-jk', keys = {{'n','k'},{'n','j'}}};
+   {'rhysd/accelerated-jk',event = 'BufEnter *'},
    {'itchyny/vim-cursorword',
     event = {'BufReadPost','BufNewFile'},
     config = function()
@@ -26,7 +26,22 @@ local enhance = {
       vim.api.nvim_command('augroup END')
     end
    };
-   {'hrsh7th/vim-eft',config = function () vim.g.eft_ignorecase = true end}
+   {'hrsh7th/vim-eft',
+    keys = {'n','f'},
+    config = function () vim.g.eft_ignorecase = true end
+   };
+   {'mhinz/vim-signify',
+    event = {'BufReadPre *','BufNewFile *'},
+    config = function()
+      vim.g.signify_sign_add = '▋'
+      vim.g.signify_sign_change = '▋'
+      vim.g.signify_sign_delete = '▋'
+      vim.g.signify_sign_delete_first_line = '▘'
+      vim.g.signify_sign_show_count = 0
+    end
+   };
+   {'editorconfig/editorconfig-vim',ft = {'go','typescript','javascript','vim','rust','markdown'}}
+
 }
 
 return enhance

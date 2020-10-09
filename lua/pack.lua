@@ -48,7 +48,7 @@ local produtor = function (pack)
   for _,repo in pairs(repos) do
     local name = repo[1]
     if output[name] == nil then
-      coroutine.resume(newConsumer,repos)
+      coroutine.resume(newConsumer,repos,1)
       return
     end
   end
