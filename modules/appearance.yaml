@@ -1,4 +1,4 @@
-- repo: ryanoasis/vim-devicons
+- repo: kyazdani42/nvim-web-devicons
 
 - repo: glepnir/spaceline.vim
   on_event: [BufReadPre,BufNewFile]
@@ -38,38 +38,19 @@
       \ 'find_history'        :['  Recently opened files                   SPC f h'],
       \ 'find_file'           :['  Find  File                              SPC f f'],
       \ 'new_file'            :['  New   File                              SPC t f'],
-      \ 'change_colorscheme'  :['  Change Colorscheme                      SPC t c'],
       \ 'find_word'           :['  Find  word                              SPC f w'],
-      \ 'book_marks'          :['  Jump to book marks                      SPC f b'],
-      \ 'open_dotfiles'       :['  Open Personal dotfiles                  SPC o c'],
-      \ 'go_source'           :['  Find Go Source Code                     SPC o s'],
       \}
-      function! GO_SOURCE ()
-        Clap gosource
-      endfunction
-
-      function! OPEN_DOTFILES()
-        Clap dotfiles
-      endfunction
 
       function! FIND_FILE() abort
-        Clap files ++finder=rg --ignore --hidden --files
+        TelescopeFindFile
       endfunction
 
       function! FIND_HISTORY() abort
-        Clap history
-      endfunction
-
-      function! CHANGE_COLORSCHEME() abort
-        Clap colors
+        TelescopeOldFiles
       endfunction
 
       function! FIND_WORD() abort
-        Clap grep2
-      endfunction
-
-      function! BOOK_MARKS() abort
-        Clap marks
+        TelescopeLiveGrep
       endfunction
 
       function! LAST_SESSION()

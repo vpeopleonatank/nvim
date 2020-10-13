@@ -11,7 +11,6 @@ end
 
 function options:load_options()
   self.mouse          = "nv";
-  self.report         = 0;
   self.errorbells     = true;
   self.visualbell     = true;
   self.hidden         = true;
