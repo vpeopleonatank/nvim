@@ -33,33 +33,24 @@
 - repo: glepnir/dashboard-nvim
   hook_source: |
     let g:dashboard_default_header = 'commicgirl5'
+    let g:dashboard_default_executive = 'telescope'
     let g:dashboard_custom_section = {
-      \ 'last_session'        :['  Recently laset session                  SPC s l'],
-      \ 'find_history'        :['  Recently opened files                   SPC f h'],
-      \ 'find_file'           :['  Find  File                              SPC f f'],
-      \ 'new_file'            :['  New   File                              SPC t f'],
-      \ 'find_word'           :['  Find  word                              SPC f w'],
+      \ 'last_session'        :{
+            \ 'description': ['  Recently laset session                  SPC s l'],
+            \ 'command': 'SessionLoad'},
+      \ 'find_history'        :{
+            \ 'description': ['  Recently opened files                   SPC f o'],
+            \ 'command': 'DashboardFindHistory'},
+      \ 'find_file'           :{
+            \ 'description': ['  Find  File                              SPC f f'],
+            \ 'command': 'DashboardFindFile'},
+      \ 'new_file'            :{
+            \ 'description': ['  New   File                              SPC t f'],
+            \ 'command': 'DashboardNewFile'},
+      \ 'find_word'           :{
+            \ 'description': ['  Find  word                              SPC f w'],
+            \ 'command': 'DashboardFindWord'},
       \}
-
-      function! FIND_FILE() abort
-        TelescopeFindFile
-      endfunction
-
-      function! FIND_HISTORY() abort
-        TelescopeOldFiles
-      endfunction
-
-      function! FIND_WORD() abort
-        TelescopeLiveGrep
-      endfunction
-
-      function! LAST_SESSION()
-        SessionLoad
-      endfunction
-
-      function! NEW_FILE()
-        DashboardNewFile
-      endfunction
 
 - repo: Shougo/defx.nvim
   on_cmd: Defx
