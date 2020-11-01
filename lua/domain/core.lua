@@ -1,6 +1,7 @@
 local options = require 'domain.options'
 local global = require 'domain.global'
-local dein = require 'domain.dein'
+-- local dein = require 'domain.dein'
+local pack = require 'domain.pack'
 local autocmd = require 'internal.event'
 local saga = require 'lspsaga.saga'
 local fs = require 'publibs.plfs'
@@ -64,11 +65,12 @@ function M.load_core()
 
   -- load my colorscheme
   require'internal.zephyr'
-  dein:load_repos()
+  -- dein:load_repos()
+  pack.load_repos()
 
   require('internal.mapping')
   autocmd.load_autocmds()
-  require('internal.eviline')
+  -- require('internal.eviline')
   saga.create_saga_augroup()
 end
 
