@@ -25,8 +25,17 @@
     }
     EOF
 
-- repo: glepnir/prodoc.nvim
-  on_event: BufReadPre
+# - repo: glepnir/prodoc.nvim
+#   on_event: BufReadPre
+
+- repo: b3nj5m1n/kommentary
+  hook_source: |-
+    lua <<EOF
+    require('kommentary.config').configure_language("default", {
+        prefer_single_line_comments = true,
+    })
+    EOF
+
 
 - repo: liuchengxu/vista.vim
   on_cmd: [Vista, Vista!, Vista!!]
