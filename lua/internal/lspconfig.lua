@@ -28,7 +28,7 @@ lspconfig.gopls.setup {
 
 lspconfig.sumneko_lua.setup {
   cmd = {
-    global.home.."/workstation/lua-language-server/bin/macOS/lua-language-server",
+    global.home.."/workstation/lua-language-server/bin/Linux/lua-language-server",
     "-E",
     global.home.."/workstation/lua-language-server/main.lua"
   };
