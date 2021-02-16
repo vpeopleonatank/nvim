@@ -1,9 +1,10 @@
 local api = vim.api
 local lspconfig = require 'lspconfig'
-local global = require 'domain.global'
-local saga = require 'lspsaga'
-local format = require('internal.format')
+local global = require 'core.global'
+local format = require('modules.completion.format')
 
+vim.cmd [[packadd lspsaga.nvim]]
+local saga = require 'lspsaga'
 saga.init_lsp_saga()
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -36,7 +37,7 @@ lspconfig.sumneko_lua.setup {
     Lua = {
       diagnostics = {
         enable = true,
-        globals = {"vim"}
+        globals = {"vim","packer_plugins"}
       },
       runtime = {version = "LuaJIT"},
       workspace = {
