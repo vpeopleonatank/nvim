@@ -20,6 +20,15 @@ tools['glepnir/prodoc.nvim'] = {
   event = 'BufReadPre *'
 }
 
+tools['b3nj5m1n/kommentary'] = {
+  config = function()
+    require('kommentary.config').configure_language("default", {
+        prefer_single_line_comments = true,
+    })
+  end
+}
+
+
 tools['liuchengxu/vista.vim'] = {
   cmd = 'Vista',
   config = conf.vim_vista
@@ -42,6 +51,31 @@ tools['iamcco/markdown-preview.nvim'] = {
   config = function ()
     vim.g.mkdp_auto_start = 0
   end
+}
+
+
+tools['jpalardy/vim-slime'] = {
+  ft = 'python',
+  config = function ()
+    vim.g.slime_target = 'tmux'
+    vim.g.slime_python_ipython = 1
+    SOCKET_NAME = ""
+    for w in os.getenv("TMUX"):gmatch("([^,]+)") do
+      SOCKET_NAME = w
+      break
+    end
+
+    vim.g.slime_default_config = {
+                --socket_name= '/tmp//tmux-1000/default',
+                socket_name= SOCKET_NAME,
+                target_pane= '{top-right}' }
+    vim.g.slime_dont_ask_default = 1
+  end
+}
+
+
+tools['hanschen/vim-ipython-cell'] = {
+  ft = 'python'
 }
 
 return tools

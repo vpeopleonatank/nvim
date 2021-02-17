@@ -83,6 +83,17 @@ function config.fomatter_nvim()
             }
           end
       },
+      python = {
+        function()
+          return {exe = "black", args = {"-"}, stdin = true}
+        end,
+      },
+
+      cpp = {
+        function()
+          return {exe = "clang-format", args = {"-"}, stdin = true}
+        end,
+      },
       lua = {
           function()
             return {

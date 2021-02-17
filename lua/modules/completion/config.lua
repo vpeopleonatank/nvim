@@ -38,6 +38,16 @@ function config.telescope()
   end
   require('telescope').setup {
     defaults = {
+      vimgrep_arguments = {
+          'rg',
+          '--color=never',
+          '--no-heading',
+          '--with-filename',
+          '--line-number',
+          '--column',
+          '--smart-case',
+          '--hidden'
+      },
       prompt_prefix = '🍔 ',
       prompt_position = 'top',
       sorting_strategy = 'ascending',

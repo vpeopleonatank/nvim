@@ -92,6 +92,22 @@ local plug_map = {
     ["x|I"]              = map_cmd("v:lua.enhance_nice_block('I')"):with_expr(),
     ["x|gI"]             = map_cmd("v:lua.enhance_nice_block('gI')"):with_expr(),
     ["x|A"]              = map_cmd("v:lua.enhance_nice_block('A')"):with_expr(),
+    -- Plugin vim-ipython-cell
+    ["n|<Leader>as"]     = map_cu('SlimeSend1 ipython --matplotlib'):with_noremap():with_silent(),
+    ["n|<Leader>ar"]     = map_cu('IPythonCellRun'):with_noremap():with_silent(),
+    ["n|<Leader>aR"]     = map_cu('IPythonCellRunTime'):with_noremap():with_silent(),
+    ["n|<Leader>ac"]     = map_cu('IPythonCellExecuteCell'):with_noremap():with_silent(),
+    ["n|<Leader>aC"]     = map_cu('IPythonCellExecuteCellJump'):with_noremap():with_silent(),
+    ["n|<Leader>al"]     = map_cu('IPythonCellClear'):with_noremap():with_silent(),
+    ["n|<Leader>ax"]     = map_cu('IPythonCellClose'):with_noremap():with_silent(),
+    ["n|[c"]     = map_cu('IPythonCellPrevCell'):with_noremap():with_silent(),
+    ["n|]c"]     = map_cu('IPythonCellNextCell'):with_noremap():with_silent(),
+    ["n|<Leader>ah"]             = map_cmd("<Plug>(SlimeLineSend)"):with_silent(),
+    ["x|<Leader>ah"]             = map_cmd("<Plug>(SlimeLineSend)"):with_silent(),
+    ["n|<Leader>ap"]     = map_cu('IPythonCellPrevCommand'):with_noremap():with_silent(),
+    ["n|<Leader>aQ"]     = map_cu('IPythonCellRestart'):with_noremap():with_silent(),
+    ["n|<Leader>ad"]     = map_cu('SlimeSend1 %debug'):with_noremap():with_silent(),
+    ["n|<Leader>aq"]     = map_cu('SlimeSend1 exit'):with_noremap():with_silent(),
 };
 
 bind.nvim_load_mapping(plug_map)
