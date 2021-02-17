@@ -16,7 +16,8 @@ function config.nvim_compe()
       path = true;
       buffer = true;
       calc = true;
-      vsnip = true;
+      vsnip = {priority = 3000};
+      -- nvim_lsp = {priority = 1000};
       nvim_lsp = true;
       nvim_lua = true;
       spell = true;
