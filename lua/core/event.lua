@@ -30,6 +30,8 @@ function autocmd.load_autocmds()
       {"BufWritePre","*.bak","setlocal noundofile"};
       {"BufWritePre","*.tsx","lua vim.api.nvim_command('Format')"};
       {"BufWritePre","*.go","lua require('internal.golines').golines_format()"};
+      -- {"CursorHoldI", "<buffer>", "lua require('lspsaga.signaturehelp').signature_help()"}
+      -- {"CursorHoldI", "*", "call v:lua.vim.lsp.buf.signature_help()"};
     };
 
     wins = {
