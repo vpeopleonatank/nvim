@@ -40,9 +40,10 @@ tools['mhartington/formatter.nvim'] = {
 }
 
 tools['brooth/far.vim'] = {
-  cmd = {'Far','Farp'},
+  cmd = {'Far','Farp','Farr','Farf'},
   config = function ()
     vim.g['far#source'] = 'rg'
+    vim.g['far#enable_undo'] = 1
   end
 }
 
