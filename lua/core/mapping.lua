@@ -8,7 +8,8 @@ local vim = vim
 -- default map
 local def_map = {
     -- Vim map
-    ["n|<C-x>k"]     = map_cr('Bdelete'):with_noremap():with_silent(),
+    ["n|<C-x>k"]     = map_cr('bd'):with_noremap():with_silent(),
+    ["n|<C-x>o"]     = map_cr("<cmd>lua require('internal.bufonly').buf_only()<CR>"):with_silent():with_nowait():with_noremap();
     ["n|<C-s>"]      = map_cu('write'):with_noremap(),
     ["n|Y"]          = map_cmd('y$'),
     ["n|]w"]         = map_cu('WhitespaceNext'):with_noremap(),
