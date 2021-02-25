@@ -9,6 +9,8 @@ function config.indent_guides()
     -- even_colors = { fg ='#45524E',bg='#95F5D7'};
     -- odd_colors = {fg='#45524E',bg='#95F5D7'};
 
+-- even_colors = { fg ='#2a3834',bg='#332b36' };
+-- odd_colors = {fg='#332b36',bg='#2a3834'};
     even_colors = { fg ='None',bg='None'};
     odd_colors = {fg='None',bg='None'};
   }

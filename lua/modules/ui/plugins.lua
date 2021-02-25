@@ -11,10 +11,10 @@ ui['glepnir/galaxyline.nvim'] = {
   requires = {'kyazdani42/nvim-web-devicons'}
 }
 
-ui['glepnir/indent-guides.nvim'] = {
-  event = 'BufReadPre *',
-  config = conf.indent_guides
-}
+-- ui['glepnir/indent-guides.nvim'] = {
+--   event = 'BufReadPre *',
+--   config = conf.indent_guides
+-- }
 
 ui['Akin909/nvim-bufferline.lua'] = {
   config = conf.nvim_bufferline,
