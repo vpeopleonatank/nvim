@@ -13,6 +13,7 @@ ui['glepnir/galaxyline.nvim'] = {
 
 ui['glepnir/indent-guides.nvim'] = {
   event = 'BufReadPre *',
+  config = conf.indent_guides
 }
 
 ui['Akin909/nvim-bufferline.lua'] = {

@@ -4,6 +4,16 @@ function config.galaxyline()
   require('modules.ui.eviline')
 end
 
+function config.indent_guides()
+  require('indent_guides').setup {
+    -- even_colors = { fg ='#45524E',bg='#95F5D7'};
+    -- odd_colors = {fg='#45524E',bg='#95F5D7'};
+
+    even_colors = { fg ='None',bg='None'};
+    odd_colors = {fg='None',bg='None'};
+  }
+end
+
 function config.nvim_bufferline()
   require('bufferline').setup{
     options = {
