@@ -16,6 +16,11 @@ function config.indent_guides()
   }
 end
 
+function config.nvcode_color_scheme()
+  vim.cmd('colorscheme nvcode')
+  vim.g.nvcode_termcolors = 256
+end
+
 function config.nvim_bufferline()
   require('bufferline').setup{
     options = {

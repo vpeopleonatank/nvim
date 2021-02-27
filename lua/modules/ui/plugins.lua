@@ -2,7 +2,11 @@ local ui = {}
 local conf = require('modules.ui.config')
 
 ui['glepnir/zephyr-nvim'] = {
-  config = [[vim.cmd('colorscheme zephyr')]]
+  -- config = [[vim.cmd('colorscheme zephyr')]]
+}
+
+ui['dracula/vim'] = {
+  config = [[vim.cmd('colorscheme dracula')]]
 }
 
 ui['glepnir/galaxyline.nvim'] = {
@@ -10,6 +14,16 @@ ui['glepnir/galaxyline.nvim'] = {
   config = conf.galaxyline,
   requires = {'kyazdani42/nvim-web-devicons'}
 }
+
+ui['npxbr/gruvbox.nvim'] = {
+  -- config = [[vim.cmd('colorscheme gruvbox')]],
+  requires = {'rktjmp/lush.nvim'}
+}
+
+ui['ChristianChiarulli/nvcode-color-schemes.vim'] = {
+  -- config = conf.nvcode_color_scheme
+}
+
 
 -- ui['glepnir/indent-guides.nvim'] = {
 --   event = 'BufReadPre *',
