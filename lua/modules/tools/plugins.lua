@@ -74,4 +74,7 @@ tools['hanschen/vim-ipython-cell'] = {
   ft = 'python'
 }
 
+tools['rmagatti/auto-session'] = {
+}
+
 return tools
