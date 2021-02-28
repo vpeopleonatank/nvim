@@ -77,4 +77,7 @@ tools['hanschen/vim-ipython-cell'] = {
 tools['rmagatti/auto-session'] = {
 }
 
+tools['tpope/vim-fugitive'] = {
+}
+
 return tools
