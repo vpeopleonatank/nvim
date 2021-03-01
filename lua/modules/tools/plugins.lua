@@ -80,4 +80,8 @@ tools['rmagatti/auto-session'] = {
 tools['tpope/vim-fugitive'] = {
 }
 
+
+tools['kkoomen/vim-doge'] = {
+}
+
 return tools
