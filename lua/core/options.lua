@@ -91,6 +91,7 @@ local function load_options()
   }
 
   local bw_local  = {
+    relativenumber = true;
     cursorline     = true;
     synmaxcol      = 2500;
     formatoptions  = "1jcroql";
