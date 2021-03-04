@@ -4,7 +4,7 @@ function config.nvim_lsp()
   require('modules.completion.lspconfig')
 end
 
-function config.envim_compe()
+function config.nvim_compe()
   require'compe'.setup {
     enabled = true;
     debug = false;
