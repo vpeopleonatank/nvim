@@ -31,7 +31,7 @@ ui['yonlu/omni.vim'] = {
 
 
 -- ui['glepnir/indent-guides.nvim'] = {
---   event = 'BufReadPre *',
+--   event = 'BufReadPre ',
 --   config = conf.indent_guides
 -- }
 
@@ -51,7 +51,7 @@ ui['kyazdani42/nvim-tree.lua'] = {
 }
 
 ui['mhinz/vim-signify'] = {
-  event = {'BufReadPre *','BufNewFile *'},
+  event = {'BufReadPre','BufNewFile'},
   config = conf.vim_signify
 }
 
