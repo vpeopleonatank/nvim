@@ -112,15 +112,12 @@
       "main": {
         "prefix": "main",
         "body": [
-            "import sys",
-            "",
-            "",
-            "def main() -> int:",
-            "    return 0",
+            "def main():",
+            "    pass",
             "",
             "",
             "if __name__ == '__main__':",
-            "    sys.exit(main())",
+            "    main()",
             ""
         ],
         "description": "Main function template for a Python script."
