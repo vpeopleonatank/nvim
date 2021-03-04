@@ -68,7 +68,8 @@ function config.telescope()
           '--line-number',
           '--column',
           '--smart-case',
-          '--hidden'
+          '--hidden',
+          '--glob=!git/*'
       },
       prompt_prefix = '🍔 ',
       prompt_position = 'top',
