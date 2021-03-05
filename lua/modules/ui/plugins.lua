@@ -35,7 +35,11 @@ ui['yonlu/omni.vim'] = {
 --   config = conf.indent_guides
 -- }
 
-ui['Akin909/nvim-bufferline.lua'] = {
+ui['glepnir/indent-guides.nvim'] = {
+  event = 'BufReadPre',
+}
+
+ui['akinsho/nvim-bufferline.lua'] = {
   config = conf.nvim_bufferline,
   requires = {'kyazdani42/nvim-web-devicons'}
 }
