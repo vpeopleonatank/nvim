@@ -29,12 +29,6 @@ ui['yonlu/omni.vim'] = {
   -- config = [[vim.cmd('colorscheme omni')]],
 }
 
-
--- ui['glepnir/indent-guides.nvim'] = {
---   event = 'BufReadPre ',
---   config = conf.indent_guides
--- }
-
 ui['glepnir/indent-guides.nvim'] = {
   event = 'BufReadPre',
 }
