@@ -29,7 +29,13 @@ ui['yonlu/omni.vim'] = {
   -- config = [[vim.cmd('colorscheme omni')]],
 }
 
-ui['glepnir/indent-guides.nvim'] = {
+-- ui['glepnir/indent-guides.nvim'] = {
+--   event = 'BufReadPre',
+-- }
+
+
+ui['lukas-reineke/indent-blankline.nvim'] = {
+  branch = 'lua',
   event = 'BufReadPre',
 }
 
