@@ -86,6 +86,7 @@ tools['kkoomen/vim-doge'] = {
 
 
 tools['voldikss/vim-floaterm'] = {
+  cmd = {'FloatermNew', 'FloatermToggle', 'FloatermPrev', 'FloatermNext', 'FloatermSend'},
 }
 
 return tools
