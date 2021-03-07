@@ -25,6 +25,11 @@ function rhs_options:map_cr(cmd_string)
   return self
 end
 
+function rhs_options:map_term(cmd_string)
+  self.cmd = ("<C-\\><C-n>:%s<CR>"):format(cmd_string)
+  return self
+end
+
 function  rhs_options:map_args(cmd_string)
   self.cmd = (":%s<Space>"):format(cmd_string)
   return self
@@ -60,6 +65,11 @@ local pbind = {}
 function pbind.map_cr(cmd_string)
   local ro = rhs_options:new()
   return ro:map_cr(cmd_string)
+end
+
+function pbind.map_term(cmd_string)
+  local ro = rhs_options:new()
+  return ro:map_term(cmd_string)
 end
 
 function pbind.map_cmd(cmd_string)

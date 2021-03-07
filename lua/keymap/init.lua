@@ -1,8 +1,10 @@
 local bind = require('keymap.bind')
 local map_cr = bind.map_cr
+local map_term = bind.map_term
 local map_cu = bind.map_cu
 local map_cmd = bind.map_cmd
 local map_args = bind.map_args
+
 require('keymap.config')
 
 local plug_map = {
@@ -46,9 +48,13 @@ local plug_map = {
     -- Plugin DadbodUI
     ["n|<Leader>od"]     = map_cr('DBUIToggle'):with_noremap():with_silent(),
     -- Plugin Floaterm
-    ["n|<A-d>"]          = map_cu('Lspsaga open_floaterm'):with_noremap():with_silent(),
-    ["t|<A-d>"]          = map_cu([[<C-\><C-n>:Lspsaga close_floaterm<CR>]]):with_noremap():with_silent(),
-    ["n|<Leader>g"]      = map_cu("Lspsaga open_floaterm lazygit"):with_noremap():with_silent(),
+    ["n|<Leader>gz"]      = map_cu("FloatermNew height=0.7 width=0.8 lazygit"):with_noremap():with_silent(),
+    ["n|<F12>"]      = map_cr('FloatermToggle'):with_noremap():with_silent(),
+    ["t|<F12>"]      = map_term('FloatermToggle'):with_silent(),
+    ["n|<F8>"]      = map_cr('FloatermPrev'):with_noremap():with_silent(),
+    ["t|<F8>"]      = map_term('FloatermPrev'):with_silent(),
+    ["n|<F9>"]      = map_cr('FloatermNext'):with_noremap():with_silent(),
+    ["t|<F9>"]      = map_term('FloatermNext'):with_silent(),
     -- Far.vim
     ["n|<Leader>fz"]     = map_cr('Farf'):with_noremap():with_silent();
     ["v|<Leader>fz"]     = map_cr('Farf'):with_noremap():with_silent();

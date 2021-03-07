@@ -84,4 +84,8 @@ tools['tpope/vim-fugitive'] = {
 tools['kkoomen/vim-doge'] = {
 }
 
+
+tools['voldikss/vim-floaterm'] = {
+}
+
 return tools
