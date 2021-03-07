@@ -48,7 +48,7 @@ local plug_map = {
     -- Plugin DadbodUI
     ["n|<Leader>od"]     = map_cr('DBUIToggle'):with_noremap():with_silent(),
     -- Plugin Floaterm
-    ["n|<Leader>gz"]      = map_cu("FloatermNew height=0.7 width=0.8 lazygit"):with_noremap():with_silent(),
+    ["n|<Leader>gz"]      = map_cu("FloatermNew --height=0.8 --width=0.8 lazygit"):with_noremap():with_silent(),
     ["n|<F12>"]      = map_cr('FloatermToggle'):with_noremap():with_silent(),
     ["t|<F12>"]      = map_term('FloatermToggle'):with_silent(),
     ["n|<F7>"]      = map_cr('FloatermNew'):with_noremap():with_silent(),
