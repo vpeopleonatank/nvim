@@ -36,7 +36,7 @@ ui['yonlu/omni.vim'] = {
 
 ui['lukas-reineke/indent-blankline.nvim'] = {
   branch = 'lua',
-  event = 'BufReadPre',
+  event = 'BufRead',
 }
 
 ui['akinsho/nvim-bufferline.lua'] = {
@@ -55,7 +55,7 @@ ui['kyazdani42/nvim-tree.lua'] = {
 }
 
 ui['lewis6991/gitsigns.nvim'] = {
-  event = {'BufReadPre','BufNewFile'},
+  event = {'BufRead','BufNewFile'},
   config = conf._gitsigns,
   requires = {'nvim-lua/plenary.nvim',opt=true}
 }
