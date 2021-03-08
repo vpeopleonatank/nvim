@@ -31,6 +31,7 @@ local plug_map = {
     ["n|gs"]             = map_cr('Lspsaga signature_help'):with_noremap():with_silent(),
     ["i|<C-s>"]             = map_cmd('<Cmd>Lspsaga signature_help<CR>'):with_noremap():with_silent(),
     ["n|gR"]             = map_cr('Lspsaga rename'):with_noremap():with_silent(),
+    ["n|gr"]             = map_cr('Telescope lsp_references'):with_noremap():with_silent(),
     ["n|gh"]             = map_cr('Lspsaga lsp_finder'):with_noremap():with_silent(),
     ["n|gt"]             = map_cmd("<cmd>lua vim.lsp.buf.type_definition()<CR>"):with_noremap():with_silent(),
     ["n|<Leader>cw"]     = map_cmd("<cmd>lua vim.lsp.buf.workspace_symbol()<CR>"):with_noremap():with_silent(),
