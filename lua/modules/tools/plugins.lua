@@ -89,4 +89,7 @@ tools['voldikss/vim-floaterm'] = {
   cmd = {'FloatermNew', 'FloatermToggle', 'FloatermPrev', 'FloatermNext', 'FloatermSend'},
 }
 
+tools['goerz/jupytext.vim'] = {
+}
+
 return tools
