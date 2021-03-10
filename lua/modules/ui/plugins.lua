@@ -5,8 +5,8 @@ ui['glepnir/zephyr-nvim'] = {
   config = [[vim.cmd('colorscheme zephyr')]]
 }
 
-ui['dracula/vim'] = {
-  -- config = [[vim.cmd('colorscheme dracula')]]
+ui['glepnir/dashboard-nvim'] = {
+  config = conf.dashboard
 }
 
 ui['glepnir/galaxyline.nvim'] = {
@@ -42,10 +42,6 @@ ui['lukas-reineke/indent-blankline.nvim'] = {
 ui['akinsho/nvim-bufferline.lua'] = {
   config = conf.nvim_bufferline,
   requires = {'kyazdani42/nvim-web-devicons'}
-}
-
-ui['glepnir/dashboard-nvim'] = {
-  config = conf.dashboard
 }
 
 ui['kyazdani42/nvim-tree.lua'] = {
