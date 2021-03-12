@@ -93,7 +93,10 @@ lspconfig.clangd.setup {
     "--suggest-missing-includes",
     "--clang-tidy",
     "--header-insertion=iwyu",
+    "--cross-file-rename",
+    "--all-scopes-completion",
   },
+  filetypes = {"c", "cpp", "objc", "objcpp", "cuda", "hpp", "h"},
 }
 
 local servers = {
