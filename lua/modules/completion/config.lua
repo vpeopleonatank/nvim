@@ -71,7 +71,7 @@ function config.telescope()
           '--hidden',
           '--glob=!git/*'
       },
-      prompt_prefix = '🍔 ',
+      prompt_prefix = '🔭 ',
       prompt_position = 'top',
       sorting_strategy = 'ascending',
       results_width = 0.6,
