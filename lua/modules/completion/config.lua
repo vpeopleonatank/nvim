@@ -73,6 +73,7 @@ function config.telescope()
       },
       prompt_prefix = '🔭 ',
       prompt_position = 'top',
+      selection_caret = " ",
       sorting_strategy = 'ascending',
       results_width = 0.6,
       file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
