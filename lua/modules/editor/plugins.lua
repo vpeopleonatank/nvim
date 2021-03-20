@@ -44,4 +44,8 @@ editor['kana/vim-niceblock']  = {
   opt = true
 }
 
+editor['romainl/vim-cool'] = {
+
+}
+
 return editor
