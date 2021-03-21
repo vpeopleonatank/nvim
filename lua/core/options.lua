@@ -94,7 +94,8 @@ local function load_options()
     relativenumber = true;
     cursorline     = true;
     synmaxcol      = 2500;
-    formatoptions  = "1jcroql";
+    -- formatoptions  = "1jcroql";
+    formatoptions  = "1jql";
     textwidth      = 80;
     expandtab      = true;
     autoindent     = true;
