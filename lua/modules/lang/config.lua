@@ -4,7 +4,12 @@ function config.nvim_treesitter()
   vim.api.nvim_command('set foldmethod=expr')
   vim.api.nvim_command('set foldexpr=nvim_treesitter#foldexpr()')
   require'nvim-treesitter.configs'.setup {
-      highlight = {
+    ensure_installed = "maintained",
+    highlight = {
+      enable = true,
+    },
+    textobjects = {
+      select = {
         enable = true,
       },
       textobjects = {
@@ -41,7 +46,7 @@ function config.nvim_treesitter()
               },
             },
       },
-    ensure_installed = 'all'
+    },
   }
 end
 

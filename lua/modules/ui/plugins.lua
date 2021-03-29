@@ -9,7 +9,7 @@ ui['glepnir/dashboard-nvim'] = {
   config = conf.dashboard
 }
 
-ui['glepnir/galaxyline.nvim'] = {
+ui['~/workstation/vim/galaxyline.nvim'] = {
   branch = 'main',
   config = conf.galaxyline,
   requires = {'kyazdani42/nvim-web-devicons'}
