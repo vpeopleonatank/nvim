@@ -77,7 +77,10 @@ tools['hanschen/vim-ipython-cell'] = {
 tools['rmagatti/auto-session'] = {
 }
 
-tools['tpope/vim-fugitive'] = {
+-- tools['tpope/vim-fugitive'] = {
+-- }
+
+tools['TimUntersberger/neogit'] = {
 }
 
 

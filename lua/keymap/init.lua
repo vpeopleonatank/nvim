@@ -49,6 +49,8 @@ local plug_map = {
     ["n|<Leader>om"]     = map_cu('MarkdownPreview'):with_noremap():with_silent(),
     -- Plugin DadbodUI
     ["n|<Leader>od"]     = map_cr('DBUIToggle'):with_noremap():with_silent(),
+    -- Plugin neogit
+    ["n|<Leader>gn"]      = map_cu("Neogit"):with_noremap():with_silent(),
     -- Plugin Floaterm
     ["n|<Leader>gz"]      = map_cu("FloatermNew --height=0.8 --width=0.8 lazygit"):with_noremap():with_silent(),
     ["n|<F12>"]      = map_cr('FloatermToggle'):with_noremap():with_silent(),
@@ -121,6 +123,13 @@ local plug_map = {
     ["n|<Leader>aQ"]     = map_cu('IPythonCellRestart'):with_noremap():with_silent(),
     ["n|<Leader>ad"]     = map_cu('SlimeSend1 %debug'):with_noremap():with_silent(),
     ["n|<Leader>aq"]     = map_cu('SlimeSend1 exit'):with_noremap():with_silent(),
+    -- Plugin hlslens
+    -- ["n|*"]          = map_cmd("*<cmd>lua require('hlslens').start()<CR>"):with_silent():with_noremap():with_nowait(),
+    -- ["n|#"]          = map_cmd("#<cmd>lua require('hlslens').start()<CR>"):with_silent():with_noremap():with_nowait(),
+    -- ["n|g*"]          = map_cmd("g*<cmd>lua require('hlslens').start()<CR>"):with_silent():with_noremap():with_nowait(),
+    -- ["n|g#"]          = map_cmd("g#<cmd>lua require('hlslens').start()<CR>"):with_silent():with_noremap():with_nowait(),
+    -- ["n|n"]          = map_cmd("<Cmd>execute('normal! ' . v:count1 . 'n')<CR> <Cmd>lua require('hlslens').start()<CR>"):with_silent():with_noremap():with_nowait(),
+    -- ["n|N"]          = map_cmd("<Cmd>execute('normal! ' . v:count1 . 'N')<CR> <Cmd>lua require('hlslens').start()<CR>"):with_silent():with_noremap():with_nowait(),
 };
 
 bind.nvim_load_mapping(plug_map)
