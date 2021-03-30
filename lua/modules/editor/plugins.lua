@@ -48,4 +48,13 @@ editor['romainl/vim-cool'] = {
 
 }
 
+editor['phaazon/hop.nvim'] = {
+  branch = 'pre-extmarks',
+  config = function()
+    vim.api.nvim_set_keymap('n', 'gsj', "<cmd>lua require'hop'.hint_words()<cr>", {})
+    vim.api.nvim_set_keymap('n', 'gsk', "<cmd>lua require'hop'.hint_char1()<cr>", {})
+    vim.api.nvim_set_keymap('n', 'gsl', "<cmd>lua require'hop'.hint_char2()<cr>", {})
+  end
+}
+
 return editor
