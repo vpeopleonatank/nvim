@@ -49,7 +49,6 @@ tools['iamcco/markdown-preview.nvim'] = {
   end
 }
 
-
 tools['jpalardy/vim-slime'] = {
   ft = 'python',
   config = function ()
@@ -92,6 +91,10 @@ tools['voldikss/vim-floaterm'] = {
 }
 
 tools['goerz/jupytext.vim'] = {
+}
+
+tools['metakirby5/codi.vim'] = {
+
 }
 
 return tools

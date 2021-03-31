@@ -40,10 +40,10 @@ ui['lukas-reineke/indent-blankline.nvim'] = {
   event = 'BufRead',
 }
 
-ui['akinsho/nvim-bufferline.lua'] = {
-  config = conf.nvim_bufferline,
-  requires = {'kyazdani42/nvim-web-devicons'}
-}
+-- ui['akinsho/nvim-bufferline.lua'] = {
+  -- config = conf.nvim_bufferline,
+--   requires = {'kyazdani42/nvim-web-devicons'}
+-- }
 
 ui['kyazdani42/nvim-tree.lua'] = {
   cmd = {'NvimTreeToggle','NvimTreeOpen'},
