@@ -9,7 +9,6 @@ ui['glepnir/dashboard-nvim'] = {
   config = conf.dashboard
 }
 
--- ui['~/workstation/vim/galaxyline.nvim'] = {
 ui['glepnir/galaxyline.nvim'] = {
   branch = 'main',
   config = conf.galaxyline,
