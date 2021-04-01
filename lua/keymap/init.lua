@@ -91,9 +91,9 @@ local plug_map = {
     -- Plugin Vista
     ["n|<Leader>v"]      = map_cu('Vista'):with_noremap():with_silent(),
     -- Plugin vim-operator-surround
-    ["n|sa"]             = map_cmd("<Plug>(operator-surround-append)"):with_silent(),
-    ["n|sd"]             = map_cmd("<Plug>(operator-surround-delete)"):with_silent(),
-    ["n|sr"]             = map_cmd("<Plug>(operator-surround-replace)"):with_silent(),
+    -- ["n|sa"]             = map_cmd("<Plug>(operator-surround-append)"):with_silent(),
+    -- ["n|sd"]             = map_cmd("<Plug>(operator-surround-delete)"):with_silent(),
+    -- ["n|sr"]             = map_cmd("<Plug>(operator-surround-replace)"):with_silent(),
     -- Plugin hrsh7th/vim-eft
     ["n|;"]              = map_cmd("v:lua.enhance_ft_move(';')"):with_expr(),
     ["x|;"]              = map_cmd("v:lua.enhance_ft_move(';')"):with_expr(),

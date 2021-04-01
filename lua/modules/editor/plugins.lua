@@ -35,9 +35,15 @@ editor['kana/vim-operator-replace'] = {
   requires = 'kana/vim-operator-user'
 }
 
-editor['rhysd/vim-operator-surround'] = {
-  event = 'BufRead',
-  requires = 'kana/vim-operator-user'
+-- editor['rhysd/vim-operator-surround'] = {
+--   event = 'BufRead',
+--   requires = 'kana/vim-operator-user'
+-- } 
+
+editor['blackCauldron7/surround.nvim'] = {
+  config = function()
+    require"surround".setup{}
+  end
 }
 
 editor['kana/vim-niceblock']  = {
