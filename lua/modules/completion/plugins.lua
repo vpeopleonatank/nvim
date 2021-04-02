@@ -24,6 +24,7 @@ completion['hrsh7th/vim-vsnip'] = {
   config = conf.vim_vsnip
 }
 
+
 completion['nvim-telescope/telescope.nvim'] = {
   cmd = 'Telescope',
   config = conf.telescope,
@@ -33,6 +34,21 @@ completion['nvim-telescope/telescope.nvim'] = {
     {'nvim-telescope/telescope-fzy-native.nvim',opt = true},
   }
 }
+
+completion['nvim-telescope/telescope-project.nvim'] = {
+  config = function()
+    vim.api.nvim_set_keymap(
+      'n',
+      '<leader>fp',
+      ":Telescope project<CR>",
+      {noremap = true, silent = true}
+    )
+  end,
+  requires = {
+    { 'nvim-telescope/telescope.nvim', opt = true}
+  }
+}
+
 
 completion['glepnir/smartinput.nvim'] = {
   ft = 'go',
