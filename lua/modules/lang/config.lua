@@ -15,16 +15,27 @@ function config.nvim_treesitter()
       textobjects = {
         select = {
           enable = true,
-          keymaps = {
+        },
+        disable = {},
+        keymaps = {
             ["af"] = "@function.outer",
             ["if"] = "@function.inner",
-            ["ac"] = "@class.outer",
-            ["ic"] = "@class.inner",
+            ["aC"] = "@class.outer",
+            ["iC"] = "@class.inner",
+            ["ac"] = "@conditional.outer",
+            ["ic"] = "@conditional.inner",
+            ["ae"] = "@block.outer",
+            ["ie"] = "@block.inner",
             ["al"] = "@loop.outer",
             ["il"] = "@loop.inner",
-            ["ai"] = "@conditional.outer",
-            ["ii"] = "@conditional.inner",
-          },
+            ["is"] = "@statement.inner",
+            ["as"] = "@statement.outer",
+            ["ad"] = "@lhs.inner",
+            ["id"] = "@rhs.inner",
+            ["am"] = "@call.outer",
+            ["im"] = "@call.inner",
+            ["iM"] = "@frame.inner",
+            ["aM"] = "@frame.outer"
         },
         move = {
               enable = true,
