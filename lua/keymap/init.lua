@@ -88,6 +88,8 @@ local plug_map = {
     ["n|k"]              = map_cmd('v:lua.enhance_jk_move("k")'):with_silent():with_expr(),
     -- Plugin QuickRun
     ["n|<Leader>r"]     = map_cr("<cmd> lua require'internal.quickrun'.run_command()"):with_noremap():with_silent(),
+    -- Toggle virtual_text
+    ["n|<Leader>lv"]     = map_cr("<cmd>lua require'internal.virtual_text'.toggle()<CR>"):with_noremap():with_silent(),
     -- Plugin Vista
     ["n|<Leader>v"]      = map_cu('Vista'):with_noremap():with_silent(),
     -- Plugin vim-operator-surround
