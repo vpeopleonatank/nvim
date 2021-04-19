@@ -63,9 +63,5 @@ editor['phaazon/hop.nvim'] = {
   end
 }
 
-editor['karb94/neoscroll.nvim'] = {
-
-}
-
 
 return editor

@@ -80,6 +80,12 @@ tools['rmagatti/auto-session'] = {
 -- }
 
 tools['TimUntersberger/neogit'] = {
+  config = function ()
+    if not packer_plugins['plenary.nvim'].loaded then
+      vim.cmd [[packadd plenary.nvim]]
+    end
+  end,
+  requires = {'nvim-lua/plenary.nvim',opt=true}
 }
 
 
