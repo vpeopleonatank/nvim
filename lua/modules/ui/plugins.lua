@@ -60,4 +60,8 @@ ui['lewis6991/gitsigns.nvim'] = {
 
 -- }
 
+-- ui['beauwilliams/focus.nvim'] = {
+
+-- }
+
 return ui
