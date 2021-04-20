@@ -39,6 +39,7 @@ tools['brooth/far.vim'] = {
   config = function ()
     vim.g['far#source'] = 'rg'
     vim.g['far#enable_undo'] = 1
+    vim.g['far#file_mask_favorites'] = {'%:p', '**/*.*', '**/*.js', '**/*.py', '**/*.java', '**/*.css', '**/*.html', '**/*.vim', '**/*.cpp', '**/*.c', '**/*.h', }
   end
 }
 

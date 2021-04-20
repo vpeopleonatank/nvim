@@ -62,8 +62,8 @@ local plug_map = {
     ["n|<F9>"]      = map_cr('FloatermNext'):with_noremap():with_silent(),
     ["t|<F9>"]      = map_term('FloatermNext'):with_silent(),
     -- Far.vim
-    ["n|<Leader>fz"]     = map_cr('Farf'):with_noremap():with_silent();
-    ["v|<Leader>fz"]     = map_cr('Farf'):with_noremap():with_silent();
+    ["n|<Leader>rf"]     = map_cr('Farr --source=vimgrep'):with_noremap():with_silent();
+    ["v|<Leader>rp"]     = map_cr('Farr --source=rgnvim'):with_noremap():with_silent();
     -- Plugin Telescope
     ["n|<Leader>bb"]     = map_cu('Telescope buffers'):with_noremap():with_silent(),
     ["n|<Leader>fa"]     = map_cu('DashboardFindWord'):with_noremap():with_silent(),
