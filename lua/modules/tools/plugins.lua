@@ -104,4 +104,8 @@ tools['metakirby5/codi.vim'] = {
 
 }
 
+tools['folke/lsp-trouble.nvim'] = {
+
+}
+
 return tools
