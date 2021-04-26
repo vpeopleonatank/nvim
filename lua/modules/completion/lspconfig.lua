@@ -31,7 +31,7 @@ vim.cmd('command! -nargs=0 LspRestart call v:lua.reload_lsp()')
 vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
     -- Enable underline, use default values
-    underline = true,
+    underline = false,
     -- Enable virtual text, override spacing to 4
     virtual_text = true,
     signs = {
