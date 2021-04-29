@@ -62,4 +62,8 @@ ui['lewis6991/gitsigns.nvim'] = {
 
 -- }
 
+-- ui['haringsrob/nvim_context_vt'] = {
+--   requires = 'nvim-treesitter'
+-- }
+
 return ui
