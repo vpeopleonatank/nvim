@@ -14,4 +14,9 @@ lang['nvim-treesitter/nvim-treesitter-textobjects'] = {
   after = 'nvim-treesitter'
 }
 
+-- lang['JoosepAlviste/nvim-ts-context-commentstring'] = {
+--   require = 'nvim-treesitter'
+-- }
+
+
 return lang

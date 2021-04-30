@@ -14,6 +14,10 @@ completion['glepnir/lspsaga.nvim'] = {
   cmd = 'Lspsaga',
 }
 
+completion['jose-elias-alvarez/nvim-lsp-ts-utils'] = {
+
+}
+
 completion['hrsh7th/nvim-compe'] = {
   event = 'InsertEnter',
   config = conf.nvim_compe,

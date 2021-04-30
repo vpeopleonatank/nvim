@@ -2,6 +2,7 @@ local api = vim.api
 local lspconfig = require 'lspconfig'
 local global = require 'core.global'
 local format = require('modules.completion.format')
+local u = require("utils")
 
 if not packer_plugins['lspsaga.nvim'].loaded then
   vim.cmd [[packadd lspsaga.nvim]]
@@ -80,9 +81,38 @@ lspconfig.sumneko_lua.setup {
 }
 
 lspconfig.tsserver.setup {
-  on_attach = function(client)
+  -- cmd = {
+  --     "typescript-language-server", "--stdio", "--tsserver-path",
+  --     "/usr/local/bin/tsserver-wrapper"
+  -- },
+  on_attach = function(client, bufnr)
     client.resolved_capabilities.document_formatting = false
     enhance_attach(client)
+
+    u.buf_map(bufnr, "i", ".", ".<C-x><C-o>")
+
+    local ts_utils = require("nvim-lsp-ts-utils")
+    ts_utils.setup {
+        -- debug = true,
+        enable_import_on_completion = true,
+        complete_parens = true,
+        signature_help_in_parens = true,
+        eslint_bin = "eslint_d",
+        eslint_enable_diagnostics = true,
+        enable_formatting = true,
+        formatter = "eslint_d",
+        formatter_args = {
+            "--fix-to-stdout", "--stdin", "--stdin-filename", "$FILENAME"
+        },
+        format_on_save = true,
+        update_imports_on_move = true
+    }
+    ts_utils.setup_client(client)
+
+    u.buf_map(bufnr, "n", "gs", ":TSLspOrganize<CR>")
+    u.buf_map(bufnr, "n", "gI", ":TSLspRenameFile<CR>")
+    u.buf_map(bufnr, "n", "gt", ":TSLspImportAll<CR>")
+    u.buf_map(bufnr, "n", "qq", ":TSLspFixCurrent<CR>")
   end
 }
 
@@ -104,7 +134,7 @@ lspconfig.rust_analyzer.setup {
 }
 
 local servers = {
-  'dockerls','bashls','pyright'
+  'dockerls','bashls','pyright', 'html', 'cssls'
 }
 
 for _,server in ipairs(servers) do
