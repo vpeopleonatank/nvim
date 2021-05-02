@@ -104,7 +104,7 @@ lspconfig.tsserver.setup {
         formatter_args = {
             "--fix-to-stdout", "--stdin", "--stdin-filename", "$FILENAME"
         },
-        format_on_save = true,
+        -- format_on_save = true,
         update_imports_on_move = true
     }
     ts_utils.setup_client(client)

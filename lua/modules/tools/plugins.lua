@@ -30,7 +30,7 @@ tools['liuchengxu/vista.vim'] = {
 }
 
 tools['mhartington/formatter.nvim'] = {
-  ft = { 'typescript','typescriptreact','lua','python','cpp' },
+  ft = { 'javascript', 'typescript','typescriptreact','lua','python','cpp' },
   config = conf.fomatter_nvim
 }
 
