@@ -100,11 +100,11 @@ tools['voldikss/vim-floaterm'] = {
 tools['goerz/jupytext.vim'] = {
 }
 
-tools['metakirby5/codi.vim'] = {
+tools['folke/lsp-trouble.nvim'] = {
 
 }
 
-tools['folke/lsp-trouble.nvim'] = {
+tools['sindrets/diffview.nvim'] = {
 
 }
 
