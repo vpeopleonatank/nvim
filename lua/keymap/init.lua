@@ -75,6 +75,7 @@ local plug_map = {
     ["n|<Leader>fw"]     = map_cu('Telescope grep_string'):with_noremap():with_silent(),
     ["n|<Leader>fh"]     = map_cu('DashboardFindHistory'):with_noremap():with_silent(),
     ["n|<Leader>fl"]     = map_cu('Telescope loclist'):with_noremap():with_silent(),
+    ["n|<Leader>fm"]     = map_cu('Telescope marks'):with_noremap():with_silent(),
     ["n|<Leader>fc"]     = map_cu('Telescope git_commits'):with_noremap():with_silent(),
     ["n|<Leader>ft"]     = map_cu('Telescope help_tags'):with_noremap():with_silent(),
     ["n|<Leader>fd"]     = map_cu('Telescope dotfiles path='..os.getenv("HOME")..'/.dotfiles'):with_noremap():with_silent(),
