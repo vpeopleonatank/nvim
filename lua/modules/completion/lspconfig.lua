@@ -72,7 +72,7 @@ lspconfig.sumneko_lua.setup {
         enable = true,
         globals = {"vim","packer_plugins"}
       },
-      runtime = {version = "LuaJIT"},
+      runtime = {version = "LuaJIT", path = vim.split(package.path, ';')},
       workspace = {
         library = vim.list_extend({[vim.fn.expand("$VIMRUNTIME/lua")] = true},{}),
       },
@@ -133,8 +133,45 @@ lspconfig.rust_analyzer.setup {
   capabilities = capabilities,
 }
 
+lspconfig.pyright.setup {
+    cmd = {global.data_path .. "/lspinstall/python/node_modules/.bin/pyright-langserver", "--stdio"},
+    -- on_attach = require'lsp'.common_on_attach,
+    handlers = {
+        ["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+            virtual_text = {spacing = 0, prefix = ""},
+            signs = true,
+            underline = true,
+            update_in_insert = true
+        })
+    },
+	 settings = {
+      python = {
+        analysis = {
+          typeCheckingMode = "basic",
+          autoSearchPaths = true,
+          useLibraryCodeForTypes = true
+        }
+      }
+    }
+}
+
+lspconfig.jsonls.setup {
+    cmd = {
+        "node", global.data_path .. "/lspinstall/json/vscode-json/json-language-features/server/dist/node/jsonServerMain.js",
+        "--stdio"
+    },
+
+    commands = {
+        Format = {
+            function()
+                vim.lsp.buf.range_formatting({}, {0, 0}, {vim.fn.line("$"), 0})
+            end
+        }
+    }
+}
+
 local servers = {
-  'dockerls','bashls','pyright', 'html', 'cssls', 'jsonls'
+'bashls', 'html', 'cssls',
 }
 
 for _,server in ipairs(servers) do
