@@ -50,9 +50,9 @@ editor['kana/vim-niceblock']  = {
   opt = true
 }
 
-editor['romainl/vim-cool'] = {
+-- editor['romainl/vim-cool'] = {
 
-}
+-- }
 
 editor['phaazon/hop.nvim'] = {
   branch = 'pre-extmarks',
