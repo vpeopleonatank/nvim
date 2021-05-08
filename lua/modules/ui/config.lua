@@ -124,6 +124,15 @@ function config.gitsigns()
        ['o ih'] = ':<C-U>lua require"gitsigns".text_object()<CR>',
        ['x ih'] = ':<C-U>lua require"gitsigns".text_object()<CR>'
      },
+      numhl = false,
+      linehl = false,
+      watch_index = {
+        interval = 1000
+      },
+      sign_priority = 6,
+      update_debounce = 200,
+      status_formatter = nil, -- Use default
+      use_decoration_api = false
   }
 end
 
