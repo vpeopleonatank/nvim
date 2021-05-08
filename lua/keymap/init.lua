@@ -19,6 +19,7 @@ local plug_map = {
     ["n|<leader>pi"]     = map_cr("PackerInstall"):with_silent():with_noremap():with_nowait();
     ["n|<leader>pc"]     = map_cr("PackerCompile"):with_silent():with_noremap():with_nowait();
     -- Lsp mapp work when insertenter and lsp start
+    
     ["n|<leader>li"]     = map_cr("LspInfo"):with_noremap():with_silent():with_nowait(),
     ["n|<leader>ll"]     = map_cr("LspLog"):with_noremap():with_silent():with_nowait(),
     ["n|<leader>lr"]     = map_cr("LspRestart"):with_noremap():with_silent():with_nowait(),
@@ -30,6 +31,7 @@ local plug_map = {
     ["n|ga"]             = map_cr("Lspsaga code_action"):with_noremap():with_silent(),
     ["v|ga"]             = map_cu("Lspsaga range_code_action"):with_noremap():with_silent(),
     ["n|gD"]             = map_cr('Lspsaga preview_definition'):with_noremap():with_silent(),
+    ["n|<leader>lf"]             = map_cu('lua vim.lsp.buf.formatting()'):with_noremap():with_silent(),
     -- ["n|gi"]             = map_cmd("<cmd>lua vim.lsp.buf.implementation()<CR>"):with_noremap():with_silent(),
     ["n|gd"]             = map_cmd("<Cmd>lua vim.lsp.buf.definition()<CR>"):with_noremap():with_silent(),
     ["n|gs"]             = map_cr('Lspsaga signature_help'):with_noremap():with_silent(),
@@ -78,7 +80,9 @@ local plug_map = {
     ["n|<Leader>fm"]     = map_cu('Telescope marks'):with_noremap():with_silent(),
     ["n|<Leader>fc"]     = map_cu('Telescope git_commits'):with_noremap():with_silent(),
     ["n|<Leader>ft"]     = map_cu('Telescope help_tags'):with_noremap():with_silent(),
-    ["n|<Leader>fd"]     = map_cu('Telescope dotfiles path='..os.getenv("HOME")..'/.dotfiles'):with_noremap():with_silent(),
+    ["n|<Leader>fd"]     = map_cu('Telescope lsp_document_diagnostics'):with_noremap():with_silent(),
+    ["n|<Leader>fD"]     = map_cu('Telescope lsp_workspace_diagnostics'):with_noremap():with_silent(),
+    ["n|<Leader>fo"]     = map_cu('Telescope dotfiles path='..os.getenv("HOME")..'/.dotfiles'):with_noremap():with_silent(),
     ["n|<Leader>fs"]     = map_cu('Telescope gosource'):with_noremap():with_silent(),
     -- prodoc
 --     ["n|gcc"]            = map_cu('ProComment'):with_noremap():with_silent(),
@@ -126,6 +130,15 @@ local plug_map = {
     ["n|<Leader>aQ"]     = map_cu('IPythonCellRestart'):with_noremap():with_silent(),
     ["n|<Leader>ad"]     = map_cu('SlimeSend1 %debug'):with_noremap():with_silent(),
     ["n|<Leader>aq"]     = map_cu('SlimeSend1 exit'):with_noremap():with_silent(),
+    -- Plugin git
+    ["n|<Leader>gl"]     = map_cu("require('gitsigns').blame_line()"):with_noremap():with_silent(),
+    ["n|<Leader>gr"]     = map_cu("require('gitsigns').reset_hunk()"):with_noremap():with_silent(),
+    ["n|<Leader>gR"]     = map_cu("require('gitsigns').reset_buffer()"):with_noremap():with_silent(),
+    ["n|<Leader>gs"]     = map_cu("require('gitsigns').stage_hunk()"):with_noremap():with_silent(),
+    ["n|<Leader>gu"]     = map_cu("require('gitsigns').undo_stage_hunk()"):with_noremap():with_silent(),
+    ["n|<Leader>go"]     = map_cu('Telescope git_status'):with_noremap():with_silent(),
+    ["n|<Leader>gc"]     = map_cu('Telescope git_commits'):with_noremap():with_silent(),
+    ["n|<Leader>gC"]     = map_cu('Telescope git_bcommits'):with_noremap():with_silent(),
     -- Plugin hlslens
     -- ["n|*"]          = map_cmd("*<cmd>lua require('hlslens').start()<CR>"):with_silent():with_noremap():with_nowait(),
     -- ["n|#"]          = map_cmd("#<cmd>lua require('hlslens').start()<CR>"):with_silent():with_noremap():with_nowait(),

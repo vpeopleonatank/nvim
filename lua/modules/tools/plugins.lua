@@ -108,4 +108,8 @@ tools['sindrets/diffview.nvim'] = {
 
 }
 
+tools['kevinhwang91/nvim-bqf'] = {
+
+}
+
 return tools
