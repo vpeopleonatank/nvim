@@ -158,7 +158,7 @@ lspconfig.pyright.setup {
             virtual_text = {spacing = 0, prefix = ""},
             signs = true,
             underline = true,
-            -- update_in_insert = true
+            update_in_insert = true
         })
     },
 	 settings = {
