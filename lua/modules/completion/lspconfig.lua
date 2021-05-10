@@ -97,6 +97,7 @@ lspconfig.tsserver.setup {
   on_attach = function(client, bufnr)
     client.resolved_capabilities.document_formatting = false
     enhance_attach(client)
+    lsp_status.on_attach(client, bufnr)
 
     u.buf_map(bufnr, "i", ".", ".<C-x><C-o>")
 
