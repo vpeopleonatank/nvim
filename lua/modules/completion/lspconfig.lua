@@ -43,6 +43,15 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
     update_in_insert = false,
 })
 
+local lsp_status = require('lsp-status')
+lsp_status.config{
+  status_symbol = '',
+  current_function = true,
+  diagnostics = false, -- Will be displayed via lualine
+}
+lsp_status.capabilities.textDocument.completion.completionItem.snippetSupport = true
+lsp_status.register_progress()
+
 local enhance_attach = function(client,bufnr)
   if client.resolved_capabilities.document_formatting then
     format.lsp_before_save()
@@ -126,6 +135,10 @@ lspconfig.clangd.setup {
     "--cross-file-rename",
     "--all-scopes-completion",
   },
+    on_attach = function(client, bufnr)
+      lsp_status.on_attach(client, bufnr)
+      require'lsp_signature'.on_attach(cfg)
+    end,
   filetypes = {"c", "cpp", "objc", "objcpp", "cuda", "hpp", "h"},
 }
 
@@ -151,6 +164,7 @@ lspconfig.pyright.setup {
     cmd = {global.data_path .. "/lspinstall/python/node_modules/.bin/pyright-langserver", "--stdio"},
     -- on_attach = require'lsp'.common_on_attach,
     on_attach = function(client, bufnr)
+      lsp_status.on_attach(client, bufnr)
       require'lsp_signature'.on_attach(cfg)
     end,
     handlers = {

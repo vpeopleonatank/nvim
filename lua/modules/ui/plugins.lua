@@ -66,4 +66,8 @@ ui['lewis6991/gitsigns.nvim'] = {
 --   requires = 'nvim-treesitter'
 -- }
 
+ui['nvim-lua/lsp-status.nvim'] = {
+
+}
+
 return ui

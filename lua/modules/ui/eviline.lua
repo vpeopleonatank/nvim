@@ -99,6 +99,16 @@ gls.left[11] = {
   }
 }
 
+gls.left[12] = {
+  LeftEnd = {
+    provider = function()
+      -- require('lsp-status').update_current_function()
+      return require('lsp-status').status() 
+    end,
+    highlight = {colors.line_bg,colors.line_bg}
+  }
+}
+
 gls.mid[1] = {
   ShowLspClient = {
     provider = 'GetLspClient',
