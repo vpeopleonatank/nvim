@@ -133,15 +133,32 @@ lspconfig.rust_analyzer.setup {
   capabilities = capabilities,
 }
 
+cfg = {
+  bind = true, -- This is mandatory, otherwise border config won't get registered.
+              -- If you want to hook lspsaga or other signature handler, pls set to false
+  doc_lines = 10, -- only show one line of comment set to 0 if you do not want API comments be shown
+
+  hint_enable = true, -- virtual hint enable
+  hint_prefix = "🐼 ",  -- Panda for parameter
+  hint_scheme = "String",
+
+  handler_opts = {
+    border = "single"   -- double, single, shadow, none
+  },
+  decorator = {"`", "`"}  -- or decorator = {"***", "***"}  decorator = {"**", "**"} see markdown help
+}
 lspconfig.pyright.setup {
     cmd = {global.data_path .. "/lspinstall/python/node_modules/.bin/pyright-langserver", "--stdio"},
     -- on_attach = require'lsp'.common_on_attach,
+    on_attach = function(client, bufnr)
+      require'lsp_signature'.on_attach(cfg)
+    end,
     handlers = {
         ["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
             virtual_text = {spacing = 0, prefix = ""},
             signs = true,
             underline = true,
-            update_in_insert = true
+            -- update_in_insert = true
         })
     },
 	 settings = {

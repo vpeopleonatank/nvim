@@ -71,4 +71,8 @@ completion['mattn/emmet-vim'] = {
   config = conf.emmet,
 }
 
+completion['ray-x/lsp_signature.nvim'] = {
+
+}
+
 return completion
