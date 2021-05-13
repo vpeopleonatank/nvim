@@ -41,7 +41,8 @@ function config.telescope()
 
   -- Disable highlighting for certain files
   -- local _bad = { '.*%.json', '.*%.lua' } -- Put all filetypes that slow you down in this array
-  -- local bad_files = function(filepath)
+  -- local _bad = { '.*%.json' } -- Put all filetypes that slow you down in this array
+  -- local not_bad_files = function(filepath)
   --   for _, v in ipairs(_bad) do
   --     if filepath:match(v) then
   --       return false
@@ -60,6 +61,13 @@ function config.telescope()
 
   local new_maker = function(filepath, bufnr, opts)
     opts = opts or {}
+
+    -- if opts.use_ft_detect == nil then opts.use_ft_detect = true end
+    -- opts.use_ft_detect = opts.use_ft_detect == false and false or not_bad_files(filepath)
+    -- print(opts.use_ft_detect)
+    -- if opts.use_ft_detect then
+    --   return
+    -- end
 
     filepath = vim.fn.expand(filepath)
     vim.loop.fs_stat(filepath, function(_, stat)
