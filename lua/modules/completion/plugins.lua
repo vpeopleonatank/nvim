@@ -28,6 +28,9 @@ completion['hrsh7th/vim-vsnip'] = {
   config = conf.vim_vsnip
 }
 
+completion['nvim-telescope/telescope-fzf-native.nvim'] = {
+  run = 'make'
+}
 
 completion['nvim-telescope/telescope.nvim'] = {
   cmd = 'Telescope',
