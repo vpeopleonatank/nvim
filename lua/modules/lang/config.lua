@@ -8,6 +8,7 @@ function config.nvim_treesitter()
     ignore_install = {"jsonc", "comment", "javascript", "jsdoc"},
     highlight = {
       enable = true,
+    disable = { "python", },  -- list of language that will be disabled
     },
     textobjects = {
       select = {

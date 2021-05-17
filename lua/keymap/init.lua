@@ -61,10 +61,10 @@ local plug_map = {
     ["t|<F12>"]      = map_term('FloatermToggle'):with_silent(),
     ["n|<F7>"]      = map_cr('FloatermNew'):with_noremap():with_silent(),
     ["t|<F7>"]      = map_term('FloatermNew'):with_silent(),
-    ["n|<F8>"]      = map_cr('FloatermPrev'):with_noremap():with_silent(),
-    ["t|<F8>"]      = map_term('FloatermPrev'):with_silent(),
-    ["n|<F9>"]      = map_cr('FloatermNext'):with_noremap():with_silent(),
-    ["t|<F9>"]      = map_term('FloatermNext'):with_silent(),
+    ["n|<leader>tp"]      = map_cr('FloatermPrev'):with_noremap():with_silent(),
+    ["t|<leader>tp"]      = map_term('FloatermPrev'):with_silent(),
+    ["n|<leader>tn"]      = map_cr('FloatermNext'):with_noremap():with_silent(),
+    ["t|<leader>tn"]      = map_term('FloatermNext'):with_silent(),
     -- Far.vim
     ["n|<Leader>rf"]     = map_cr('Farr --source=vimgrep'):with_noremap():with_silent();
     ["v|<Leader>rp"]     = map_cr('Farr --source=rgnvim'):with_noremap():with_silent();
@@ -126,12 +126,16 @@ local plug_map = {
     ["n|<Leader>ax"]     = map_cu('IPythonCellClose'):with_noremap():with_silent(),
     ["n|[c"]     = map_cu('IPythonCellPrevCell'):with_noremap():with_silent(),
     ["n|]c"]     = map_cu('IPythonCellNextCell'):with_noremap():with_silent(),
-    ["n|<Leader>ah"]             = map_cmd("<Plug>(SlimeLineSend)"):with_silent(),
-    ["x|<Leader>ah"]             = map_cmd("<Plug>(SlimeLineSend)"):with_silent(),
+    ["n|<Leader>ah"]             = map_cmd("<Plug>SlimeLineSend"):with_silent(),
+    ["x|<Leader>ah"]             = map_cmd("<Plug>SlimeRegionSend"):with_silent(),
     ["n|<Leader>ap"]     = map_cu('IPythonCellPrevCommand'):with_noremap():with_silent(),
     ["n|<Leader>aQ"]     = map_cu('IPythonCellRestart'):with_noremap():with_silent(),
     ["n|<Leader>ad"]     = map_cu('SlimeSend1 %debug'):with_noremap():with_silent(),
     ["n|<Leader>aq"]     = map_cu('SlimeSend1 exit'):with_noremap():with_silent(),
+    ["n|<A-n>"]             = map_cmd(":IPythonCellInsertAbove<CR>a"):with_silent(),
+    ["n|<A-p>"]             = map_cmd(":IPythonCellInsertBelow<CR>a"):with_silent(),
+    ["i|<A-p>"]             = map_cmd("<C-o>:IPythonCellInsertAbove<CR>"):with_silent(),
+    ["i|<A-n>"]             = map_cmd("<C-o>:IPythonCellInsertBelow<CR>"):with_silent(),
     -- Plugin git
     ["n|<Leader>gl"]     = map_cu("require('gitsigns').blame_line()"):with_noremap():with_silent(),
     ["n|<Leader>gr"]     = map_cu("require('gitsigns').reset_hunk()"):with_noremap():with_silent(),
