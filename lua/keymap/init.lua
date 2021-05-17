@@ -132,8 +132,8 @@ local plug_map = {
     ["n|<Leader>aQ"]     = map_cu('IPythonCellRestart'):with_noremap():with_silent(),
     ["n|<Leader>ad"]     = map_cu('SlimeSend1 %debug'):with_noremap():with_silent(),
     ["n|<Leader>aq"]     = map_cu('SlimeSend1 exit'):with_noremap():with_silent(),
-    ["n|<A-n>"]             = map_cmd(":IPythonCellInsertAbove<CR>a"):with_silent(),
-    ["n|<A-p>"]             = map_cmd(":IPythonCellInsertBelow<CR>a"):with_silent(),
+    ["n|<A-p>"]             = map_cmd(":IPythonCellInsertAbove<CR>a"):with_silent(),
+    ["n|<A-n>"]             = map_cmd(":IPythonCellInsertBelow<CR>a"):with_silent(),
     ["i|<A-p>"]             = map_cmd("<C-o>:IPythonCellInsertAbove<CR>"):with_silent(),
     ["i|<A-n>"]             = map_cmd("<C-o>:IPythonCellInsertBelow<CR>"):with_silent(),
     -- Plugin git
