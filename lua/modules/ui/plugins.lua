@@ -48,6 +48,11 @@ ui['kyazdani42/nvim-tree.lua'] = {
   requires = 'kyazdani42/nvim-web-devicons'
 }
 
+-- ui['ms-jpq/chadtree'] = {
+ui['~/.local/share/nvim/site/pack/chadtree'] = {
+
+}
+
 -- ui['tamago324/lir.nvim'] = {
 --   config = function ()
 --     local actions = require'lir.actions'
