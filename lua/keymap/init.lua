@@ -14,8 +14,6 @@ local plug_map = {
     -- person keymap
     ["n|mf"]             = map_cr("<cmd>lua require('internal.fsevent').file_event()<CR>"):with_silent():with_nowait():with_noremap();
     ["n|gb"]             = map_cr("BufferLinePick"):with_noremap():with_silent(),
-    ["n|<tab>"]             = map_cr("bn"):with_noremap():with_silent(),
-    ["n|<S-tab>"]             = map_cr("bp"):with_noremap():with_silent(),
     -- Packer
     ["n|<leader>pu"]     = map_cr("PackerUpdate"):with_silent():with_noremap():with_nowait();
     ["n|<leader>pi"]     = map_cr("PackerInstall"):with_silent():with_noremap():with_nowait();
@@ -87,6 +85,7 @@ local plug_map = {
     ["n|<Leader>fo"]     = map_cu('Telescope dotfiles path='..os.getenv("HOME")..'/.dotfiles'):with_noremap():with_silent(),
     ["n|<Leader>fs"]     = map_cu('Telescope gosource'):with_noremap():with_silent(),
     ["n|<Leader>ft"]     = map_cu('Telescope treesitter'):with_noremap():with_silent(),
+    ["n|<Leader>zl"]     = map_cu('Telescope jumplist'):with_noremap():with_silent(),
     -- prodoc
 --     ["n|gcc"]            = map_cu('ProComment'):with_noremap():with_silent(),
 --     ["x|gcc"]            = map_cr('ProComment'),
