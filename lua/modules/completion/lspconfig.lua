@@ -254,37 +254,45 @@ table.insert(tsserver_args, eslint)
 local markdownPandocFormat = {formatCommand = 'pandoc -f markdown -t gfm -sp --tab-stop=2', formatStdin = true}
 
 -- Not yet get efm server work
--- lspconfig.efm.setup {
---     -- init_options = {initializationOptions},
---     cmd = {global.data_path .. "/lspinstall/efm/efm-langserver"},
---     init_options = {documentFormatting = true, codeAction = false},
---     filetypes = {"lua", "python", "javascriptreact", "javascript", "typescript",
---                 "typescriptreact","sh", "html", "css", "json", "yaml", "markdown", "vue"},
---     -- filetypes = {"lua", "python", "sh", "html", "css", "json", "yaml", "markdown"},
---     settings = {
---         rootMarkers = {".git/"},
---         languages = {
---             python = python_arguments,
---             lua = luaFormat,
---             sh = {shfmt},
---             javascript = tsserver_args,
---             javascriptreact = tsserver_args,
--- 			typescript = tsserver_args,
--- 			typescriptreact = tsserver_args,
---             html = {prettier},
---             css = {prettier},
---             json = {prettier},
---             yaml = {prettier},
---             markdown = {markdownPandocFormat}
---             -- javascriptreact = {prettier, eslint},
---             -- javascript = {prettier, eslint},
---             -- markdown = {markdownPandocFormat, markdownlint},
---         }
---     }
--- }
+lspconfig.efm.setup {}
+lspconfig.efm.setup {
+    -- init_options = {initializationOptions},
+    cmd = {global.data_path .. "/lspinstall/efm/efm-langserver"},
+    init_options = {documentFormatting = true, codeAction = false},
+    filetypes = {"lua", "python", "javascriptreact", "javascript", "typescript",
+                "typescriptreact","sh", "html", "css", "json", "yaml", "markdown", "vue"},
+    -- filetypes = {"lua", "python", "sh", "html", "css", "json", "yaml", "markdown"},
+   --  settings = {
+   --      rootMarkers = {".git/"},
+   --      languages = {
+   --          python = python_arguments,
+   --          lua = luaFormat,
+   --          sh = {shfmt},
+   --          javascript = tsserver_args,
+   --          javascriptreact = tsserver_args,
+			-- typescript = tsserver_args,
+			-- typescriptreact = tsserver_args,
+   --          html = {prettier},
+   --          css = {prettier},
+   --          json = {prettier},
+   --          yaml = {prettier},
+   --          markdown = {markdownPandocFormat}
+   --          -- javascriptreact = {prettier, eslint},
+   --          -- javascript = {prettier, eslint},
+   --          -- markdown = {markdownPandocFormat, markdownlint},
+   --      }
+   --  }
+}
+
+lspconfig.bashls.setup {
+    cmd = {
+        "node", global.data_path .. "/lspinstall/bash/node_modules/bash-language-server/bin/main.js",
+        "start"
+    },
+}
 
 local servers = {
-'bashls', 'html', 'cssls',
+  'html', 'cssls',
 }
 
 for _,server in ipairs(servers) do
