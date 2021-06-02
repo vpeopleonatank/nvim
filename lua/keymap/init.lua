@@ -73,6 +73,7 @@ local plug_map = {
     ["n|<Leader>fb"]     = map_cu('Telescope file_browser'):with_noremap():with_silent(),
     -- ["n|<Leader>fb"]     = map_cu('DashboardJumpMark'):with_noremap():with_silent(),
     -- ["n|<Leader>ff"]     = map_cu('DashboardFindFile'):with_noremap():with_silent(),
+    ["n|<Leader>fk"]     = map_cu('Telescope find_files find_command=fdfind,--type,f,-H,-E,.git,-I'):with_noremap():with_silent(),
     ["n|<Leader>ff"]     = map_cu('Telescope find_files find_command=fdfind,--type,f,-H,-E,.git'):with_noremap():with_silent(),
     ["n|<Leader>fg"]     = map_cu('Telescope git_files'):with_noremap():with_silent(),
     ["n|<Leader>fw"]     = map_cu('Telescope grep_string'):with_noremap():with_silent(),
