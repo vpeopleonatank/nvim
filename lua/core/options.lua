@@ -104,6 +104,7 @@ local function load_options()
     softtabstop    = -1;
     breakindentopt = "shift:2,min:20";
     wrap           = false;
+    nowrap         = true;
     linebreak      = true;
     number         = true;
     colorcolumn    = "80";
