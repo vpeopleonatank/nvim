@@ -103,8 +103,8 @@ local function load_options()
     shiftwidth     = 2;
     softtabstop    = -1;
     breakindentopt = "shift:2,min:20";
-    wrap           = false;
-    nowrap         = true;
+    wrap           = true;
+    nowrap         = false;
     linebreak      = true;
     number         = true;
     colorcolumn    = "80";
