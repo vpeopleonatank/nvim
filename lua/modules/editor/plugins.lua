@@ -63,5 +63,8 @@ editor['phaazon/hop.nvim'] = {
   end
 }
 
+editor['mg979/vim-visual-multi'] = {
+
+}
 
 return editor
