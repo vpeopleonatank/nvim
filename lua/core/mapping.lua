@@ -26,13 +26,14 @@ local def_map = {
     ["n|<Leader>ss"] = map_cu('SessionSave'):with_noremap(),
     ["n|<Leader>sl"] = map_cu('SessionLoad'):with_noremap(),
   -- Manipulate Window
-    ["n|sq"]      = map_cmd('close<Return>'):with_silent(),
-    ["n|ss"]      = map_cmd('split<Return><C-w>w'):with_silent(),
-    ["n|sv"]      = map_cmd('vsplit<Return><C-w>w'):with_silent(),
+    ["n|sq"]      = map_cmd(':close<Cr>'):with_silent(),
+    ["n|sm"]      = map_cmd(':split<Cr>'):with_silent(),
+    ["n|sn"]      = map_cmd(':vsplit<Cr>'):with_silent(),
     ["n|sh"]      = map_cmd('<C-w>h'):with_silent(),
     ["n|sj"]      = map_cmd('<C-w>j'):with_silent(),
     ["n|sk"]      = map_cmd('<C-w>k'):with_silent(),
     ["n|sl"]      = map_cmd('<C-w>l'):with_silent(),
+    ["n|s<Space>"]      = map_cmd('<C-w>w'):with_silent(),
   -- Insert
     -- ["i|<C-w>"]      = map_cmd('<C-[>diwi'):with_noremap(),
     ["i|<C-h>"]      = map_cmd('<BS>'):with_noremap(),
