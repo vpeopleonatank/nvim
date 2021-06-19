@@ -25,6 +25,7 @@ local def_map = {
     ["n|<C-q>"]      = map_cmd(':wq!<CR>'),
     ["n|<Leader>ss"] = map_cu('SessionSave'):with_noremap(),
     ["n|<Leader>sl"] = map_cu('SessionLoad'):with_noremap(),
+    ["n|<Leader>qa"] = map_cr('qa'):with_noremap(),
   -- Manipulate Window
     ["n|sq"]      = map_cmd(':close<Cr>'):with_silent(),
     ["n|sm"]      = map_cmd(':split<Cr>'):with_silent(),
