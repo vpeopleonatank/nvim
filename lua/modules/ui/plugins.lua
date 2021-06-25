@@ -49,9 +49,9 @@ ui['kyazdani42/nvim-tree.lua'] = {
 }
 
 -- ui['ms-jpq/chadtree'] = {
-ui['~/.local/share/nvim/site/pack/chadtree'] = {
+-- ui['~/.local/share/nvim/site/pack/chadtree'] = {
 
-}
+-- }
 
 -- ui['tamago324/lir.nvim'] = {
 --   config = function ()
