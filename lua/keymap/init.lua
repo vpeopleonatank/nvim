@@ -46,6 +46,7 @@ local plug_map = {
     ["n|<Leader>tf"]     = map_cu('DashboardNewFile'):with_noremap():with_silent(),
     -- Plugin nvim-tree
     ["n|<Leader>e"]      = map_cr('NvimTreeToggle'):with_noremap():with_silent(),
+    ["n|<Leader>it"]      = map_cmd(":lua require'nvim-tree.view'.View.width = "):with_noremap(),
     -- ["n|<Leader>e"]      = map_cr('CHADopen'):with_noremap():with_silent(),
     -- ["n|<Leader>F"]      = map_cr('NvimTreeToggle'):with_noremap():with_silent(),
     -- Plugin MarkdownPreview
