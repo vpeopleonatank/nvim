@@ -112,4 +112,8 @@ tools['kevinhwang91/nvim-bqf'] = {
 
 }
 
+tools['mfussenegger/nvim-dap'] = {
+
+}
+
 return tools
