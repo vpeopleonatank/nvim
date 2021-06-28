@@ -69,7 +69,7 @@ local plug_map = {
     ["n|<Leader>rf"]     = map_cr('Farr --source=vimgrep'):with_noremap():with_silent();
     ["v|<Leader>rp"]     = map_cr('Farr --source=rgnvim'):with_noremap():with_silent();
     -- Plugin Telescope
-    ["n|<Leader>bb"]     = map_cu('Telescope buffers'):with_noremap():with_silent(),
+    ["n|<Leader>["]     = map_cu('Telescope buffers'):with_noremap():with_silent(),
     ["n|<Leader>fa"]     = map_cu('DashboardFindWord'):with_noremap():with_silent(),
     ["n|<Leader>fb"]     = map_cu('Telescope file_browser'):with_noremap():with_silent(),
     -- ["n|<Leader>fb"]     = map_cu('DashboardJumpMark'):with_noremap():with_silent(),
