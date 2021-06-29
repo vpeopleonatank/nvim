@@ -116,4 +116,8 @@ tools['mfussenegger/nvim-dap'] = {
 
 }
 
+tools['ojroques/nvim-bufdel'] = {
+
+}
+
 return tools
