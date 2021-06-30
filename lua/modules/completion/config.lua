@@ -14,12 +14,10 @@ function config.nvim_compe()
     source = {
       path = true;
       buffer = true;
-      calc = true;
       vsnip = {priority = 3000};
       -- nvim_lsp = {priority = 1000};
       nvim_lsp = true;
       nvim_lua = true;
-      spell = true;
       tags = true;
       snippets_nvim = false;
     };
