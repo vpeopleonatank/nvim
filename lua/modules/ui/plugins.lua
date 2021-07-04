@@ -32,7 +32,6 @@ ui['ChristianChiarulli/nvcode-color-schemes.vim'] = {
 
 ui['lukas-reineke/indent-blankline.nvim'] = {
   event = 'BufRead',
-  branch = 'lua',
   config = conf.indent_blakline
 }
 
