@@ -162,5 +162,9 @@
     "IPython set trace": {
         "prefix": "ipydb",
         "body": "from IPython import embed; embed()$0"
+    },
+    "ptIPython set trace": {
+        "prefix": "pti",
+        "body": "from ptpython.repl import embed; embed(globals(), locals())$0"
     }
 }
