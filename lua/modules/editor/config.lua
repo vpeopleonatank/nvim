@@ -36,4 +36,8 @@ function config.vim_cursorwod()
   vim.api.nvim_command('augroup END')
 end
 
+function config.line_notes()
+  require'line-notes'.setup{}
+end
+
 return config

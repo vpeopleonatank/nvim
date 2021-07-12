@@ -131,6 +131,8 @@ function config.telescope()
   -- require('telescope').load_extension('fzf')
   require'telescope'.load_extension('dotfiles')
   require'telescope'.load_extension('gosource')
+  require'telescope'.load_extension('line_notes')
+  require'telescope'.load_extension('line_notes_project')
 end
 
 function config.vim_sonictemplate()

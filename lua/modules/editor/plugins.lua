@@ -67,4 +67,11 @@ editor['mg979/vim-visual-multi'] = {
 
 }
 
+editor['kristijanhusak/line-notes.nvim'] = {
+  config = conf.line_notes,
+  requires = {
+    { 'nvim-telescope/telescope.nvim' }
+  }
+}
+
 return editor
