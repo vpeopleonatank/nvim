@@ -98,6 +98,9 @@ tools['voldikss/vim-floaterm'] = {
 }
 
 tools['goerz/jupytext.vim'] = {
+  config = function ()
+    vim.g.jupytext_fmt = 'py:percent'
+  end
 }
 
 tools['folke/lsp-trouble.nvim'] = {
